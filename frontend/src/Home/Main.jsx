@@ -1,9 +1,8 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "animate.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Main = () => {
   useEffect(() => {
@@ -50,9 +49,9 @@ const Main = () => {
               Dive into a digital gallery where emotion, color, and creativity collide.
               Discover breathtaking paintings from emerging and established artists.
             </p>
-            <a href="#gallery" className="btn btn-light mt-3 px-4 py-2 rounded-pill">
+            <Link to="/gallery" className="btn btn-light mt-3 px-4 py-2 rounded-pill">
               Explore Gallery
-            </a>
+            </Link>
           </div>
         </div>
       </div>

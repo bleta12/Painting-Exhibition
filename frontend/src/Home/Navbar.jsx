@@ -1,4 +1,7 @@
 
+import { Link } from "react-router-dom";
+
+
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-md bg-white shadow-sm py-3">
@@ -22,19 +25,26 @@ const Navbar = () => {
         {/* Nav Links */}
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto me-3 d-none d-md-flex">
-            {["Home", "Gallery", "Reviews", "Support"].map((item) => (
+            {["Home", "Gallery", "Reviews"].map((item) => (
               <li className="nav-item mx-2" key={item}>
-                <a className="nav-link text-secondary fw-medium" href="#">
+                <Link
+                  className="nav-link text-secondary fw-medium"
+                 to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                >
                   {item}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
 
           {/* Buttons */}
           <div className="d-flex gap-2">
-            <button className="btn btn-outline-secondary fw-medium">Sign In</button>
-            <button className="btn btn-dark text-white fw-medium">Sign Up</button>
+            <button className="btn btn-outline-secondary fw-medium">
+              Sign In
+            </button>
+            <button className="btn btn-dark text-white fw-medium">
+              Sign Up
+            </button>
           </div>
         </div>
       </div>

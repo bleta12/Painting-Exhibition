@@ -1,19 +1,21 @@
-import AboutSection from "./AboutSection";
-import Footer from "./Footer";
-import GalleryPreview from "./GalleryPreview";
-import Main from "./Main";
-import Navbar from "./Navbar";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Home/Home";
+import AddPainting from "./AddPainting";
+import Paintings from "./Gallery/Paintings";
+
+
+
+
 
 
 function App() {
   return (
-  <>
-    <Navbar/>
-    <Main/>
-    <GalleryPreview/>
-    <AboutSection/>
-    <Footer/>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />   
+      <Route path="/addPainting" element={<AddPainting />} />   
+       <Route path="/gallery" element={<Paintings />} />   
+
+    </Routes>
   );
 }
 
