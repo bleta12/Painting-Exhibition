@@ -1,10 +1,10 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ onReviewsClick }) => {
   const navItems = ["Home", "Gallery", "Reviews", "Support"];
 
   const handleClick = (item) => {
-    if (item === "Reviews") {
+    if (item === "Reviews" && onReviewsClick) {
       onReviewsClick();
     }
   };
@@ -30,20 +30,24 @@ const Navbar = ({ onReviewsClick }) => {
           <ul className="navbar-nav ms-auto me-3 d-none d-md-flex">
             {navItems.map((item) => (
               <li className="nav-item mx-2" key={item}>
-                <a
+                <Link
                   className="nav-link text-secondary fw-medium"
-                  href="#"
+                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                   onClick={() => handleClick(item)}
                 >
                   {item}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
 
           <div className="d-flex gap-2">
-            <button className="btn btn-outline-secondary fw-medium">Sign In</button>
-            <button className="btn btn-dark text-white fw-medium">Sign Up</button>
+            <button className="btn btn-outline-secondary fw-medium">
+              Sign In
+            </button>
+            <button className="btn btn-dark text-white fw-medium">
+              Sign Up
+            </button>
           </div>
         </div>
       </div>

@@ -14,10 +14,10 @@ public class Painting {
     @Id
     private String id;
     private String title;
-    private String artist;
     private int year;
     private String description;
     private String imageUrl;
+    private String userId;
 
 
 }

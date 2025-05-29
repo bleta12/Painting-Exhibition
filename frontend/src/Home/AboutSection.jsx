@@ -13,7 +13,7 @@ const AboutSection = () => {
       style={{
         padding: "3rem",
         borderRadius: "1rem",
-        backgroundColor: "rgba(0, 0, 0, 0.74)", // black-ish background
+        backgroundColor: "rgba(0, 0, 0, 0.74)", 
         boxShadow: "0 8px 20px rgba(0,0,0,0.5)",
       }}
       data-aos="fade-up"
